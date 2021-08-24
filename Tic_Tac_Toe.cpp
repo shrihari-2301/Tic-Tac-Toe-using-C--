@@ -18,16 +18,17 @@ class main_cls{
         }
         void game(){
             board();
-            cout<<"*** Game starts ***"<<endl;
+            cout<<endl<<"*** Game starts ***"<<endl;
             int count=0;
             int re,i,j;
             char turn;
             turn='X';
             do
             {
-                cout<<"It is \""<<turn<<" \"turn now"<<endl;
+                cout<<endl;
+                cout<<"It is \""<<turn<<"\" turn now"<<endl<<endl;
                 int choice;
-                cout<<"Enter your Choice:";
+                cout<<"Enter your Choice: ";
                 cin>>choice;
                 count+=1;
                 if(choice<=3)
@@ -72,49 +73,56 @@ class main_cls{
                 {
                     if((c[2][0]==c[2][1]) && (c[2][1] == c[2][2]) && (c[2][1] != ' ')) //1st row
                     {
-                        cout<<turn<<" Wins"<<endl;
+                        cout<<endl;
+                        cout<<"******* "<<turn<<" Wins"<<" ******"<<endl<<endl;
                         printboard();
                         break;
                     }
                     else if((c[1][0]==c[1][1]) && (c[1][1] == c[1][2]) && (c[1][1] != ' ')) // 2nd row
                     {
-                        cout<<turn<<" Wins"<<endl;
-                        printboard();
+                        cout<<endl;
+                        cout<<"******* "<<turn<<" Wins"<<" ******"<<endl<<endl;
                         break;
                     }
                     else if((c[0][0]==c[0][1]) && (c[0][1] == c[0][2]) && (c[0][1] != ' ')) // 3rd row
                     {
-                        cout<<turn<<" Wins"<<endl;
+                        cout<<endl;
+                        cout<<"******* "<<turn<<" Wins"<<" ******"<<endl<<endl;
                         printboard();
                         break;
                     }
                     else if((c[2][0]==c[1][0]) && (c[1][0] == c[0][0]) && (c[1][0] != ' ')) // 1st column
                     {
-                        cout<<turn<<" Wins"<<endl;
+                        cout<<endl;
+                        cout<<"******* "<<turn<<" Wins"<<" ******"<<endl<<endl;
                         printboard();
                         break;
                     }
                     else if((c[2][1] == c[1][1]) && (c[1][1] == c[0][1]) && (c[1][1] != ' ')) //2nd column
                     {
-                        cout<<turn<<" Wins"<<endl;
+                        cout<<endl;
+                        cout<<"******* "<<turn<<" Wins"<<" ******"<<endl<<endl;
                         printboard();
                         break;
                     }
                     else if((c[2][2] == c[1][2]) && (c[1][2] == c[0][2]) && (c[1][2] != ' ')) //3rd column
                     {
-                        cout<<turn<<" Wins"<<endl;
+                        cout<<endl;
+                        cout<<"******* "<<turn<<" Wins"<<" ******"<<endl<<endl;
                         printboard();
                         break;
                     }
                     else if ((c[2][0] == c[1][1]) && (c[1][1] == c[0][2]) && (c[1][1] != ' ')) // left to right diagonal
                     {
-                        cout<<turn<<" Wins"<<endl;
+                        cout<<endl;
+                        cout<<"******* "<<turn<<" Wins"<<" ******"<<endl<<endl;
                         printboard();
                         break;
                     }
                     else if ((c[2][2] == c[1][1]) && (c[1][1] == c[0][0]) && (c[1][1] != ' ')) // right to left diagonal
                     {
-                        cout<<turn<<" Wins"<<endl;
+                        cout<<endl;
+                        cout<<"******* "<<turn<<" Wins"<<" ******"<<endl<<endl;
                         printboard();
                         break;
                     }
@@ -125,7 +133,7 @@ class main_cls{
                     cout<<"Tie"<<endl;
 
                 if(turn=='X')
-                    turn='P';
+                    turn='O';
                 else
                     turn='X';
                 }while(count<9);
